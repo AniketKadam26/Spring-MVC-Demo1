@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>PortFolio</title>
+</head>
+<body style=background-color:MistyRose>
+<h1 align="center">PortFolio WebPage</h1>
+
+<table border="2" align="center">
+    <tr>
+        <th>Project ID</th>
+        <th>Project Name</th>
+        <th>Technology</th>
+    </tr>
+    <tr th:each="project:${projects}">  <!-- for(String s: data){ sop(s) }-->
+        <td th:text="${project.projectId}"></td>
+        <td th:text="${project.projectName}"></td>
+        <td th:text="${project.technology}"></td>
+    </tr>
+</table>
+</body>
+</html>

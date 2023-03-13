@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ContactUs</title>
+</head>
+<body style=background-color:MistyRose>
+<h1 align="center">This is contact page for Application</h1>
+<form th:action="@{/saveproduct}" method="post" th:object="${store}">
+    <table align=center bgcolor=aliceblue cellspacing=10px cellpadding=10px>
+        <tr><th>
+
+            <label>Enter Item:</label></th>
+            <td><input type="text" name="item" th:field="*{item}"><br></td></tr><br>
+        <tr><th>
+            <label>Enter Cost</label></th>
+            <td><input type="text" name="cost" th:field="*{cost}"><br></td></tr><br>
+        <tr><th>
+            <label>Enter Revenue</label></th>
+            <td><input type="text" name="revenue" th:field="*{revenue}"><br></td></tr><br>
+        <tr>
+            <td><input type="submit" name="submit" value="SUBMIT"/>
+
+    </table>
+</form>
+</body>
+</html>

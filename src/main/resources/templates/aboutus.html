@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>AboutUs</title>
+</head>
+<body style=background-color:MistyRose>
+<h1 align="center">Store Revenue Table</h1>
+<a href="addproduct"><button>Add Product</button></a>
+<table border="2" align="center">
+    <tr>
+        <th>Item</th>
+        <th>Cost</th>
+        <th>Revenue</th>
+        <th>Profit</th>
+    </tr>
+    <tr th:each="store:${records}" th:style="${store.revenue-store.cost>=0?'background:green':'background:red'}">  <!-- for(String s: data){ sop(s) }-->
+        <td th:text="${store.item}"></td>
+        <td th:text="${store.cost}"></td>
+        <td th:text="${store.revenue}"></td>
+        <td th:text="${store.revenue-store.cost}"></td>
+    </tr>
+
+</table>
+</body>
+</html>
